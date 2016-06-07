@@ -1,0 +1,77 @@
+body{
+	background:url('../photography/bg2.jpg');
+}
+header{
+	width:672px;
+	margin:30px auto;
+}
+
+header h1 span{
+	display:block;
+	font-size:14px;
+}
+
+section{width:672px;margin:20px auto;background:rgba(255,255,255,.7);border-radius:8px}
+#gallery{padding:10px}
+#gallery ul{
+	list-style-type:none;
+}
+#gallery ul li{
+	display:inline-block;
+	padding:5px;
+}
+#gallery ul li img:hover{
+	opacity:0.8;
+}
+
+.footer-container{
+background:#010101;
+}
+
+.footer-social{
+margin-top:10px;
+font-family:script mt bold;
+font-size:25px;
+font-color:#565252;
+}
+.judul-about{
+font-family:script mt bold;
+color: #2d2b2b;
+border-bottom:2px dotted #565252;
+}
+
+.nav{
+font-family:verdana;
+margin-left:80px;
+margin-right:60px;
+
+}
+
+.nav li a{
+color:#5f56ca;
+
+text-align:justify;
+font-size:15px;
+}
+
+
+.nav li a:hover{
+-moz-transition: color 500ms ease-in-out 0s, background-color 500ms ease-in-out 0s;
+-ms-transition: color 500ms ease-in-out 0s, background-color 500ms ease-in-out 0s;
+-o-transition: color 500ms ease-in-out 0s, background-color 500ms ease-in-out 0s;
+-webkit-transition: color 500ms ease-in-out 0s, background-color 500ms ease-in-out 0s;
+transition: color 500ms ease-in-out 0s, background-color 500ms ease-in-out 0s;
+white-space: normal;
+background:#FFB3AC;
+color:#fff;
+}
+.border{
+border-top:2px dotted #FFB3AC;
+margin:20px;
+}
+
+.dropdown-menu{
+background:#000;
+}
+
+
