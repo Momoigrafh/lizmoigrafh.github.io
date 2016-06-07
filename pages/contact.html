@@ -1,0 +1,216 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>LizmoiGrafh</title>
+
+    <link href="../css/mystyle.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">  
+    <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Bootstrap jQuery library -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <!--ajax-->
+    <script src="../js/jquery.xdomainajax.js"></script>
+
+<!--css carousel-->
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+        margin: auto;
+        }
+    </style>
+    
+    <!--css icon bar kalo dia di kecilin-->
+    <style>
+        .icon-bar{
+            background-color: rgb(51, 122, 183); 
+        }
+    </style>
+
+        <!--===================Memanggil google Maps API==================-->
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+ 
+        <script>
+            //!--================ menambahkan properti peta ====================-->
+            function initialize() {
+                var properti_peta = {
+                    center: new google.maps.LatLng(-7.760111, 110.4069036),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+            //!--====================== membuat object peta ======================-->
+                var peta = new google.maps.Map(document.getElementById("tempat_peta"), properti_peta);
+            }
+            //!--====================== menampilkan peta ========================-->
+            google.maps.event.addDomListener(window, 'load', initialize);
+ 
+        </script>	
+
+</head>
+<!--=======================================NAVIGATION BAR========================================-->
+   	<div class="row">	
+	<div class="col-md-12 navbar-wrapper">
+    <div class="container">
+    <nav class="navbar navbar-light navbar-static-top" role="navigation">
+    <div class="container">
+	<div class="col-md-1"></div><!--spacing kiri navbar-->
+	<div class="col-md-3"><!--spacing logo-->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="momoigrafh.github.io">LizmoiGrafh</a>
+    </div>
+	</div>
+<!--=======================================MENU NAVBAR========================================-->
+   <div class="col-md-8"><!--Spacing menu-->
+
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="../index.html">LizmoiGrafh</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="../pages/jurnal.html">
+                Journal <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="../pages/jurnal.html">Journal</a></li>
+                    <li><a href="../pages/vlog.html">VBlog</a></li>
+                </ul>
+                </li>
+            <li><a href="../jq/portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="../pages/about.html">
+            About Us <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            </li>
+        </li>
+    </ul>
+    </div>
+    </div>
+<!--=======================================Menu NAVBAR========================================-->
+<!--=======================================NAVIGATION BAR========================================-->
+<!--=======================================Profile========================================-->
+		<div class="content_about content_about_open">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">	
+					<div class="col-md-6">
+					<p id="first_p_about" style="margin-bottom: -21px; margin-top: 31px;">
+		<br></br>
+		
+		<br>
+
+	</p>
+
+<!-- Content 1st -->
+</div>
+            <!-- Content 1st -->
+            <div class="row">
+            <div class="col-md-12"> 
+            <div class="col-md-6">
+            <img src="../media/capture.png" alt=""/>
+            <p class="contact">We are freelance photographer!
+            Based in Yogyakarta City, Indonesia.<br/>
+
+<br></br>
+<br></br>
+<br></br>
+            <h1>Contact Us</h1>  
+            <div id="tempat_peta" style="width:500px;height:300px;"></div>  
+            </div>
+
+            </div>
+            <div class="col-md-6">
+            <div class="hero-unit">
+            </div>
+            </div>
+            <!-- Content 2nd -->
+             <div class="col-md-12"> 
+            <div class="col-md-6">
+            <form class="form-horizontal">
+            <div class="control-group">
+
+            <form id="ajax-contact" method="post" action="mailer.php">
+            <div class="field">
+                       <p>Send us a message..</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="field">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="field">
+            <button type="submit">Send</button>
+            </div>
+
+            <div id="form-messages"></div>
+            </div>
+            </form>
+</div>
+    </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+      
+<!--=================================== Footer Container ==============================-->
+        <div class="footer-container">
+            <div class="row row-main">
+                
+                </div>
+                <br></br>
+                <div class="row">
+                <div class="col-md-12">
+
+                <div class="col-md-6">  
+                        <a href="https://www.facebook.com/mailidaalison.tikka"><img src="../media/logo-facebook.png" alt=""/></a>
+                        
+                        <a href="https://twitter.com/Mae_Momoi13"><img src="../media/chmdka6vb9u7oolz96ml2.png" alt=""/></a>
+    
+                        <a href="https://www.instagram.com/mae_momoi13/"><img src="../media/unnamed.png" alt=""/></a>
+                </ul>   
+                <br></br>
+                © 2016&nbsp;by LizMoi</span></p>
+                <br></br>
+                </div> 
+                </div>
+                </div>
+                            
+<!--=======================================Profile========================================-->
+
+<!--===ajax===-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <!--Bootstrap CSS -->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+<!-- Bootstrap jQuery library -->
+<script src="../js/jquery.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
